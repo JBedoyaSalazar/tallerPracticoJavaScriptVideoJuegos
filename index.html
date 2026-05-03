@@ -8,8 +8,35 @@
 </head>
 <body>
     <div class="game-container">
-        <canvas id="game"></canvas>
+        <div class="hud">
+            <div class="hud-card">
+                <span class="hud-label">Nivel</span>
+                <strong id="level-display">1</strong>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">Vidas</span>
+                <strong id="lives-display">0</strong>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">Riesgo</span>
+                <strong id="risk-display">Bajo</strong>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">Tiempo Nivel</span>
+                <strong id="level-time-display">00:00</strong>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">Record</span>
+                <strong id="best-time-display">--:--</strong>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">Tiempo Total</span>
+                <strong id="total-time-display">00:00</strong>
+            </div>
+            <button id="reset-progress" type="button" class="hud-reset">Reiniciar</button>
+        </div>
 
+        <canvas id="game"></canvas>
 
         <div class="btns">
             <button id="up"></button>
@@ -17,11 +44,11 @@
             <button id="right"></button>
             <button id="down"></button>
         </div>
-
-
-        <div class="messages">
-            <p>Example text</p>
-        </div>
+        
+        <section class="summary-panel" id="summary-panel" hidden>
+            <h2>Resumen de partida</h2>
+            <p id="summary-text">Sin datos por ahora.</p>
+        </section>
     </div>
 
     <script src="./maps.js"></script>
